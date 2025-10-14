@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fff4e0;
+  margin: 0;
+}
+
+h1 {
+  background: #ff9900;
+  color: white;
+  padding: 15px;
+  margin: 0 0 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+img {
+  width: 60%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+a {
+  display: inline-block;
+  margin-top: 15px;
+  background: #ff9900;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #cc7a00;
+}
