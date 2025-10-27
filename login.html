@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="login.css">
-<head>
-  <title>Login</title>
-</head>
-<body>
-  <h1>Pagina login</h1>
-  <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=800" width="400" alt="Login form">
-  <p>Introdu datele tale pentru a te conecta la cont.</p>
-
-  <form>
-    <label>Email:</label><br>
-    <input type="email" placeholder="exemplu@email.com"><br><br>
-    <label>Parola:</label><br>
-    <input type="password" placeholder="********"><br><br>
-    <button>Autentificare</button>
-  </form>
-
-  <p>Nu ai cont? <a href="inregistrare.html">Înregistrează-te aici</a></p>
-  <a href="index.html">Inapoi acasa</a>
-</body>
-</html>
+<div class="login-card">
+   <link rel="stylesheet" href="login.css">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Nume utilizator" required>
+        <input type="password" name="password" placeholder="Parolă" required>
+        <button type="submit">Login</button>
+    </form>
+    <a class="link" href="inregistrare.html">Nu ai cont? Înregistrează-te</a>
+</div>

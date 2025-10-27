@@ -1,51 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #e8f5e9;
-  margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(#ff2aff, #210045, #1a0029);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:  cardPulse 2s infinite alternate;
 }
 
-h1 {
-  background: #2e7d32;
-  color: white;
-  padding: 15px;
-  margin: 0 0 20px 0;
+/* Animate background gradient */
+@keyframes backgroundShift {
+    0% { background: linear-gradient(135deg, #210045, #1a0029); }
+    50% { background: linear-gradient(135deg, #1a0029, #210045); }
+    100% { background: linear-gradient(135deg, #210045, #1a0029); }
 }
 
-form {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 300px;
-  border-radius: 8px;
+/* Login Card */
+.login-card {
+    background: rgba(0,0,0,0.7);
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 2px solid #ff2aff;
+    box-shadow: 0 0 20px #ff2aff, 0 0 40px #00f0ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    animation: cardPulse 2s infinite alternate;
 }
 
-input {
-  width: 80%;
-  padding: 8px;
-  margin: 8px 0;
+/* Neon pulse animation */
+@keyframes cardPulse {
+    0% { box-shadow: 0 0 20px #ff2aff, 0 0 40px #00f0ff; }
+    50% { box-shadow: 0 0 30px #ff2aff, 0 0 60px #00f0ff; }
+    100% { box-shadow: 0 0 20px #ff2aff, 0 0 40px #00f0ff; }
 }
 
-button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+/* Title */
+.login-card h2 {
+    color: #ff2aff;
+    text-shadow: 0 0 10px #ff2aff, 0 0 20px #00f0ff;
+    margin-bottom: 25px;
+    font-size: 14px;
+    animation: textGlow 1.5s infinite alternate;
 }
 
-button:hover {
-  background: #1b5e20;
+/* Neon text glow animation */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ff2aff, 0 0 20px #00f0ff; }
+    50% { text-shadow: 0 0 20px #ff2aff, 0 0 40px #00f0ff; }
+    100% { text-shadow: 0 0 10px #ff2aff, 0 0 20px #00f0ff; }
 }
 
-a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #2e7d32;
-  text-decoration: none;
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #ff2aff;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #ff2aff inset, 0 0 20px #00f0ff inset;
+    transition: 0.3s;
 }
 
-a:hover {
-  text-decoration: underline;
+.login-card input:focus {
+    border-color: #00f0ff;
+    box-shadow: 0 0 15px #ff2aff inset, 0 0 30px #00f0ff inset;
+}
+
+/* Button */
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #00f0ff;
+    color: #000;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: 0 0 10px #ff2aff, 0 0 20px #00f0ff;
+    transition: 0.3s;
+    animation: buttonGlow 2s infinite alternate;
+}
+
+.login-card button:hover {
+    background: #ff2aff;
+    color: #fff;
+}
+
+/* Button glow animation */
+@keyframes buttonGlow {
+    0% { box-shadow: 0 0 10px #ff2aff, 0 0 20px #00f0ff; }
+    50% { box-shadow: 0 0 20px #ff2aff, 0 0 40px #00f0ff; }
+    100% { box-shadow: 0 0 10px #ff2aff, 0 0 20px #00f0ff; }
+}
+
+/* Link */
+.login-card .link {
+    margin-top: 15px;
+    color: #ff2aff;
+    font-size: 8px;
+    text-decoration: none;
+    text-shadow: 0 0 6px #ff2aff;
+    transition: 0.3s;
+}
+
+.login-card .link:hover {
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #ff2aff;
 }

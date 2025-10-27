@@ -1,42 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
-  background: #e6faff;
+  background: linear-gradient(135deg, #1a0059, #000014);
+  color: #fff;
   margin: 0;
 }
 
 h1 {
-  background: #0099cc;
-  color: white;
-  padding: 15px;
-  margin: 0 0 20px 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #00eaff, #ff00c3);
+  border-bottom: 3px solid #00eaff;
+  text-shadow: 0 0 14px #ff00c3;
 }
 
 img {
-  width: 60%;
-  max-width: 400px;
-  border-radius: 10px;
+  width: 55%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin: 20px auto;
+  border: 3px solid #00eaff;
+  box-shadow: 0 0 20px #ff00c3;
+}
+
+p {
+  width: 75%;
+  margin: 10px auto;
+  line-height: 1.6;
+  text-shadow: 0 0 6px #ff00c3;
 }
 
 a {
   display: inline-block;
-  margin-top: 15px;
-  background: #0099cc;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #ff00c3;
+  border-radius: 6px;
+  color: #fff;
   text-decoration: none;
+  text-shadow: 0 0 12px #00eaff;
+  transition: 0.25s;
 }
 
 a:hover {
-  background: #0077aa;
+  background: #00eaff;
+  color: #000;
+  letter-spacing: 2px;
 }

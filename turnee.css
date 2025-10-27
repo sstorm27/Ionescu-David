@@ -1,42 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
-  background: #fff4e0;
+  background: linear-gradient(135deg, #25006b, #100031);
+  color: #fff;
   margin: 0;
+  padding: 0;
 }
 
 h1 {
-  background: #ff9900;
-  color: white;
-  padding: 15px;
-  margin: 0 0 20px 0;
+  background: linear-gradient(90deg, #ff0099, #00eaff);
+  padding: 20px;
+  margin: 0 0 25px 0;
+  color: #ffffff;
+  text-shadow: 0 0 12px #ff0099, 0 0 22px #00eaff;
+  border-bottom: 3px solid #ff0099;
 }
 
+/* Lista turneelor */
 ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  margin: 10px 0;
+  background: rgba(255, 0, 153, 0.1);
+  border: 2px solid #ff0099;
+  margin: 15px auto;
+  padding: 15px;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00eaff;
+  transition: transform 0.2s;
 }
 
-img {
-  width: 60%;
-  max-width: 400px;
-  border-radius: 10px;
+li:hover {
+  transform: scale(1.04);
 }
 
 a {
-  display: inline-block;
-  margin-top: 15px;
-  background: #ff9900;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
+  color: #00eaff;
   text-decoration: none;
+  text-shadow: 0 0 10px #00eaff;
 }
 
 a:hover {
-  background: #cc7a00;
+  color: #ff0099;
+  text-shadow: 0 0 15px #ff0099;
 }
