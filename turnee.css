@@ -1,51 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-body {
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
-  background: linear-gradient(135deg, #25006b, #100031);
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  background: linear-gradient(90deg, #ff0099, #00eaff);
-  padding: 20px;
-  margin: 0 0 25px 0;
-  color: #ffffff;
-  text-shadow: 0 0 12px #ff0099, 0 0 22px #00eaff;
-  border-bottom: 3px solid #ff0099;
-}
-
-/* Lista turneelor */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: rgba(255, 0, 153, 0.1);
-  border: 2px solid #ff0099;
-  margin: 15px auto;
-  padding: 15px;
-  width: 70%;
-  border-radius: 10px;
-  box-shadow: 0 0 12px #00eaff;
-  transition: transform 0.2s;
-}
-
-li:hover {
-  transform: scale(1.04);
-}
-
-a {
-  color: #00eaff;
-  text-decoration: none;
-  text-shadow: 0 0 10px #00eaff;
-}
-
-a:hover {
-  color: #ff0099;
-  text-shadow: 0 0 15px #ff0099;
+:root{--pink:#ff00c8;--cyan:#00eaff}
+*{box-sizing:border-box}
+body{font-family:'Press Start 2P',cursive;margin:0;color:#fff;background:linear-gradient(135deg,#220033,#070014);display:grid;grid-template-areas:"header header" "nav main" "aside main" "footer footer";grid-template-columns:220px 1fr;gap:16px;padding:16px}
+header{grid-area:header;padding:18px;text-align:center;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:8px}
+nav{grid-area:nav;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px}
+main{grid-area:main;padding:12px}
+.card-container{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.card{background:rgba(255,255,255,0.03);border-left:6px solid var(--pink);padding:14px;border-radius:10px;width:300px;transition:transform .2s}
+.card:hover{transform:scale(1.03);box-shadow:0 0 18px var(--cyan)}
+aside{grid-area:aside;padding:12px;background:rgba(0,234,255,0.04);border-radius:8px}
+footer{grid-area:footer;padding:12px;text-align:center;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:8px}
+.back-to-top{position:fixed;right:20px;bottom:20px;background:var(--pink);color:#000;padding:10px;border-radius:50%;text-decoration:none}
+@media (max-width:900px){
+  body{grid-template-areas:"header" "nav" "main" "aside" "footer";grid-template-columns:1fr;padding:12px}
+  .card-container{flex-direction:column;align-items:center}
+  .card{width:92%}
+  nav ul{display:flex;gap:8px;flex-wrap:wrap}
 }
