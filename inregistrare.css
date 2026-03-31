@@ -1,0 +1,108 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #2e0057, #070013);
+  color: white;
+  display: flex;
+  flex-direction: column;       /* Elementele stau vertical */
+  justify-content: center;      /* Centrează tot vertical */
+  align-items: center;          /* Centrează orizontal */
+  height: 100vh;
+  margin: 0;
+  animation: gradientShift 10s ease-in-out infinite alternate;
+}
+
+/* Background animat */
+@keyframes gradientShift {
+  0% { background: linear-gradient(135deg, #2e0057, #070013); }
+  25% { background: linear-gradient(135deg, #070013, #2e0057); }
+  50% { background: linear-gradient(135deg, #2e0057, #ff00c8); }
+  75% { background: linear-gradient(135deg, #ff00c8, #00eaff); }
+  100% { background: linear-gradient(135deg, #2e0057, #070013); }
+}
+
+/* Titlu */
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formular */
+form {
+  background: rgba(0, 255, 255, 0.08);
+  padding: 28px;
+  border-radius: 12px;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 25px #ff00c8;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: formGlow 2s infinite alternate;
+}
+
+/* Glow formular */
+@keyframes formGlow {
+  0% { box-shadow: 0 0 25px #ff00c8; }
+  50% { box-shadow: 0 0 40px #ff00c8, 0 0 20px #00eaff; }
+  100% { box-shadow: 0 0 25px #ff00c8; }
+}
+
+/* Input-uri */
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 12px 0;
+  background: #0a0020;
+  color: #fff;
+  border: 2px solid #ff00c8;
+  border-radius: 6px;
+  transition: 0.3s;
+  animation: inputGlow 2s infinite alternate;
+}
+
+@keyframes inputGlow {
+  0% { box-shadow: 0 0 5px #ff00c8 inset; }
+  50% { box-shadow: 0 0 12px #ff00c8 inset, 0 0 6px #00eaff inset; }
+  100% { box-shadow: 0 0 5px #ff00c8 inset; }
+}
+
+/* Buton */
+button {
+  background: #00eaff;
+  color: #000;
+  padding: 10px 22px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 12px;
+  transition: 0.25s;
+  animation: buttonGlow 2s infinite alternate;
+}
+
+button:hover {
+  background: #ff00c8;
+  color: white;
+  box-shadow: 0 0 20px #00eaff;
+}
+
+@keyframes buttonGlow {
+  0% { box-shadow: 0 0 5px #00eaff; }
+  50% { box-shadow: 0 0 15px #00eaff, 0 0 10px #ff00c8; }
+  100% { box-shadow: 0 0 5px #00eaff; }
+}
+
+/* Link-uri */
+p, a.back {
+  margin-top: 14px;
+  text-align: center;
+}
+
+a {
+  color: #ff00c8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-shadow: 0 0 11px #00eaff;
+}
